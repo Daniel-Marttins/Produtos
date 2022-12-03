@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(11, 223, 201, 0.968), rgb(255, 196, 0));
+    background-size: 400% 400%;
+    -webkit-backdrop-filter: brightness(100%);
+    backdrop-filter: brightness(80%);
+    animation: changeColor 8s ease-in infinite;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.138);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.324);
+}
+
+.atalhos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 80%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.113);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.138);
+    border: 1px solid rgba(255, 255, 255, 0.379);
+    border-radius: 10px;
+}
+
+.atalhos h3 {
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.324);
+    color: white;
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.img img {
+    width: 90%;
+    height: 80%;
+}
+
+.btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.btn button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 15%;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+    background-color: rgba(11, 248, 169, 0.552);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.138);
+    border: 1px solid rgba(75, 69, 69, 0.16);
+}
+
+.btn button img {
+    width: 20%;
+    height: 80%;
+}
+
+.btn button:hover {
+    transform: translateX(-15px);
+    opacity: 0.7;
+    border: 1px solid rgba(255, 255, 255, 0.508);
+}
+
+
+@keyframes changeColor {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

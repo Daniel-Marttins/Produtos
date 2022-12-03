@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" th:href="@{/img/arquivo.png}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{todos.css}">
+    <title>Todos os Produtos</title>
+</head>
+
+<body>
+
+    <form th:action="@{/atualizar/{id}(id=${produto.id})}" class="produtos" th:each="produto : ${produto}">
+        <div class="row">
+            <input type="text" class="identificador" name="id" th:value="${produto.id}" placeholder="ID" readonly>
+            <input type="text" class="codigo" name="codigo" th:value="${produto.codigo}" placeholder="Codigo">
+            <input type="text" class="nome" name="nomeProduto" th:value="${produto.nomeProduto}" placeholder="Nome">
+            <input type="date" class="data" name="data" th:value="${produto.data}">
+            <input type="number" class="qtd" name="quantidade" th:value="${produto.quantidade}" placeholder="Quantidade">
+            <input type="number" class="valor" name="valor" th:value="${produto.valor}" placeholder="R$">
+            <button class="atualizar" th:onclick="btn.atualizar()">Atualizar</button>
+            <button class="excluir" th:onclick="btn.deletar()">Excluir</button>
+            <button><a class="voltar" th:href="@{/}">Voltar</a></button>
+        </div>
+    </form>
+    <script th:src="@{/scripts/todos.js}"></script> 
+</body>
+
+</html>

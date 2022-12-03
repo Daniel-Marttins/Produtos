@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles/style.css}">
+    <link rel="shortcut icon" th:href="@{img/guardar-dados.png}" type="image/x-icon">
+    <title>Salvar Produto</title>
+</head>
+
+<body>
+    <div class="card">
+        <form action="/salvar" th:object="${produto}" method="post" class="formProduto">
+            <div class="card-input">
+                <div class="row">
+                    <div class="codigos">
+                        <label for="Codigo">Código:</label>
+                        <input type="text" maxlength="5" class="code" name="codigo" readonly>
+                        <span th:if="${#fields.hasErrors('codigo')}" th:errors="*{codigo}"></span>
+                    </div>
+
+                    <div class="data">
+                        <label for="Data">Data:</label>
+                        <input type="date" name="data">
+                    </div>
+
+                    <div class="nomeP">
+                        <label for="Nome_Produto">Nome:</label>
+                        <input type="text" class="nome" name="nomeProduto">
+                        <span th:if="${#fields.hasErrors('nomeProduto')}" th:errors="*{nomeProduto}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="quantidade">
+                        <label for="Quantidade">Quantidade:</label>
+                        <input type="number" class="qntd" name="quantidade">
+                        <span th:if="${#fields.hasErrors('quantidade')}" th:errors="*{quantidade}"></span>
+                    </div>
+                    <div class="valores">
+                        <label for="Valor">Valor:</label>
+                        <input type="number" class="valor" name="valor" placeholder="R$">
+                        <span th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}"></span>
+                    </div>
+                    <div class="btn">
+                        <a class="salvar"><img src="img/guardar-dados.png">Salvar</a>
+                        <a th:href="@{/}"><img src="img/de-volta.png">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script th:src="@{/scripts/salvar.js}"></script>
+</body>
+
+</html>

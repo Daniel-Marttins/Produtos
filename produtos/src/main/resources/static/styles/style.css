@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(11, 223, 201, 0.968), rgb(255, 196, 0));
+    background-size: 400% 400%;
+    -webkit-backdrop-filter: brightness(100%);
+    backdrop-filter: brightness(80%);
+    animation: changeColor 8s ease-in infinite;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.138);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.324);
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.card-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+}
+
+.codigos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.codigos label {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.codigos input {
+    width: 70%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.089);
+    font-weight: 900;
+    color: gray;
+    text-indent: 2rem;
+}
+
+.codigos input:focus {
+    outline: 1px auto rgba(11, 248, 169, 0.552);
+}
+
+.data {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.data label {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.data input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.089);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: gray;
+}
+
+.data input:focus {
+    outline: 1px auto rgba(11, 248, 169, 0.552);
+}
+
+.nomeP {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.nomeP label {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.nomeP input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 95%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.089);
+    font-size: 20px;
+    text-indent: 2rem;
+    font-weight: 900;
+    color: gray;
+}
+
+.quantidade {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.quantidade label {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.quantidade input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.089);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: gray;
+}
+
+.valores {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.valores label {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.valores input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.089);
+    font-size: 20px;
+    text-indent: 1rem;
+    font-weight: 900;
+    color: gray;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.btn a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 60%;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+    background-color: rgba(11, 248, 169, 0.552);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.138);
+    border: 1px solid rgba(75, 69, 69, 0.16);
+    text-decoration: none;
+}
+
+.btn a img {
+    width: 15%;
+    height: 60%;
+}
+
+.btn a:hover {
+    transform: translateX(-15px);
+    opacity: 0.7;
+    border: 1px solid rgba(255, 255, 255, 0.508);
+}
+
+
+@keyframes changeColor {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

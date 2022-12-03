@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" th:href="@{/img/buscar.png}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/styles/styleBusca.css}">
+    <link rel="stylesheet" href="styleBusca.css">
+    <title>Buscar Produto</title>
+</head>
+<body>
+    <div class="card">
+        <div class="form">
+            <div class="card-input">
+                <div class="row">
+                    <div class="id">
+                        <label for="#">ID:</label>
+                        <input type="text" class="id" th:value="${Id}" readonly>
+                    </div>
+                    <div class="codigos">
+                        <label for="#">Código:</label>
+                        <input type="text" maxlength="5" class="code"th:value="${Codigo}" readonly>
+                    </div>
+                    <div class="data">
+                        <label for="#">Data:</label>
+                        <input type="date" th:value="${Data}">
+                    </div>
+
+                    <div class="nomeP">
+                        <label for="#">Nome:</label>
+                        <input type="text" class="nome" th:value="${Nome}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="quantidade">
+                        <label for="#">Quantidade:</label>
+                        <input type="number" class="qntd" th:value="${Quantidade}">
+                    </div>
+                    <div class="valores">
+                        <label for="#">Valor:</label>
+                        <input type="number" class="valor" th:value="${Valor}" placeholder="R$">
+                    </div>
+                    <div class="btn">
+                        <a class="buscar"><img th:src="@{/img/buscar.png}">Buscar</a>
+                        <a th:href="@{/}"><img th:src="@{/img/de-volta.png}">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/scripts/buscar.js}"></script>
+</body>
+</html>

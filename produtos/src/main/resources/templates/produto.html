@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" th:href="@{img/caixa.png}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/styles/produto.css}">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="atalhos">
+            <h3>[F2] - Cadastrar</h3>
+            <h3>[F4] - Buscar</h3>
+            <h3>[F6] - Ver Todos</h3>
+            <h3>[F8] - Atualizar</h3>
+            <h3>[F9] - Deletar</h3>
+        </div>
+        <div class="main">
+            <div class="img">
+                <img th:src="@{img/dados-da-nuvem.png}">
+            </div>
+            <div class="btn">
+                <button class="salvar"><img th:src="@{/img/guardar-dados.png}">Salvar</button>
+                <button class="buscar"><img th:src="@{/img/buscar.png}">Pesquisar</button>
+                <button class="todos"><img th:src="@{/img/arquivo.png}">Ver Todos</button>
+                <button class="atualizar"><img th:src="@{/img/atualizar.png}">Atualizar</button>
+                <button class="deletar"><img th:src="@{/img/excluir-banco-de-dados.png}">Deletar</button>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/scripts/script.js}"></script>
+</body>
+
+</html>

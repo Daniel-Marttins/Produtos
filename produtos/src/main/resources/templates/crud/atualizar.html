@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" th:href="@{/img/buscar.png}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/styles/atualizar.css}">
+    <title>Atualizar Produto</title>
+</head>
+<body>
+    <div class="card">
+        <form th:action="@{/atualizar/produto/{id}(id=${produto.id})}" th:object="${produto}" method="post">
+            <div class="card-input">
+                <div class="row">
+                    <div class="id">
+                        <label for="#">ID:</label>
+                        <input type="text" class="id" name="id" th:value="${produto.id}" readonly>
+                    </div>
+                    <div class="codigos">
+                        <label for="#">Código:</label>
+                        <input type="text" maxlength="5" name="codigo" class="code"th:value="${produto.codigo}" readonly>
+                    </div>
+                    <div class="data">
+                        <label for="#">Data:</label>
+                        <input type="date" name="data" th:value="${produto.data}">
+                    </div>
+
+                    <div class="nomeP">
+                        <label for="#">Nome:</label>
+                        <input type="text" class="nome" name="nomeProduto" th:value="${produto.nomeProduto}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="quantidade">
+                        <label for="#">Quantidade:</label>
+                        <input type="number" class="qntd" name="quantidade" th:value="${produto.quantidade}">
+                    </div>
+                    <div class="valores">
+                        <label for="#">Valor:</label>
+                        <input type="number" class="valor" name="valor" th:value="${produto.valor}" placeholder="R$">
+                    </div>
+                    <div class="btn">
+                        <a class="atualizar"><img th:src="@{/img/recuperacao-de-dados.png}">Atualizar</a>
+                        <a class="voltar" th:href="@{/}"><img th:src="@{/img/de-volta.png}">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script th:src="@{/scripts/atualizar.js}"></script>
+</body>
+</html>
